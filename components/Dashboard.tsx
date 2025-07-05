@@ -10,8 +10,7 @@ import { format } from 'date-fns';
 export default function Dashboard() {
   const { 
     categoryData, 
-    budgetComparison, 
-    currentMonthTransactions 
+    budgetComparison
   } = useTransactions();
   
   const currentMonth = format(new Date(), 'MMMM yyyy');

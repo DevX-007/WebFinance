@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 
 // GET /api/transactions/[id] - Fetch a single transaction
 export async function GET(
-  request: NextRequest,
+  _request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
@@ -88,7 +88,7 @@ export async function PUT(
 
 // DELETE /api/transactions/[id] - Delete a transaction
 export async function DELETE(
-  request: NextRequest,
+  _request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {

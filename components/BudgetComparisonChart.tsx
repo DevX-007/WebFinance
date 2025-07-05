@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell, ReferenceLine } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from 'recharts';
 import { useTransactions } from '../hooks/useTransactionsDB';
 
 export default function BudgetComparisonChart() {
@@ -49,7 +49,7 @@ export default function BudgetComparisonChart() {
           <Tooltip content={<CustomTooltip />} />
           <Legend />
           <Bar dataKey="budgeted" name="Budgeted" fill="#85756E" barSize={12} radius={[0, 4, 4, 0]}>
-            {sortedData.map((entry, index) => (
+            {sortedData.map((_entry, index) => (
               <Cell key={`budget-${index}`} fill="#85756E" />
             ))}
           </Bar>

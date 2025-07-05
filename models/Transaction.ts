@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { Transaction, TransactionCategory } from '../types';
+import { Transaction } from '../types';
 
 // Define the schema
 const transactionSchema = new mongoose.Schema<Transaction>({
@@ -44,7 +44,7 @@ const transactionSchema = new mongoose.Schema<Transaction>({
 }, {
   timestamps: true, // Adds createdAt and updatedAt fields
   toJSON: {
-    transform: function(doc, ret) {
+    transform: function(_doc, ret) {
       ret.id = ret._id.toString();
       delete ret._id;
       delete ret.__v;
