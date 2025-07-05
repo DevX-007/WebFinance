@@ -1,4 +1,3 @@
-import React from 'react';
 import FloatingEmojis from './FloatingEmojis';
 
 export default function AnimatedBackground() {
